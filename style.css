@@ -20,9 +20,28 @@
 	outline: inherit;
 }
 
-.c-container__btn::before {
-    content: '';
-    width: 20px;
-    height: 4px;
+.o-btn {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: "CircularBld",sans-serif;
+    font-size: 13px;
+    margin: 0;
+    transition: all .2s ease-out;
+    letter-spacing: .35em;
+    line-height: 2.54;
+    outline: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.o-btn--black {
     color: #000;
 }
+
+.o-btn--black::after {
+    background-color: #000;
+}
+
