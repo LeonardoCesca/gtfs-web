@@ -8,7 +8,7 @@ $dsn_Options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 try {
     $pdo = new PDO($conexao, $user, $password);
     echo "Connected successfully";
-} else (PDOException $error) {
+} catch (PDOException $error) {
     echo "Connection error: " . $error->getMessage();
 }
 
