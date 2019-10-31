@@ -27,11 +27,13 @@ try {
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="./assets/css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <title>Informações sobre Onibus</title>
     </head>
     <body>
-        <div id="container">
-            <h1>Onibus - Porto Alegre</h1>
+        <div class="container center">
+            <h1 class="text-center mt-3 mb-3">Onibus - Porto Alegre</h1>
             <table class="table table-bordered table-condensed">
                 <thead>
                     <tr>
@@ -40,6 +42,7 @@ try {
                         <th>Orgão</th>
                         <th>Linha</th>
                         <th>Itinerário</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,10 +53,11 @@ try {
                             <td><?php echo htmlspecialchars($row['agency_id']); ?></td>
                             <td><?php echo htmlspecialchars($row['route_short_name']); ?></td>
                             <td><?php echo htmlspecialchars($row['route_long_name']); ?></td>
-                            <td><?php echo htmlspecialchars($row['route_desc']); ?></td>
-
+                            <td class="c-garbage"><img class="c-garbage__img" src="./assets/img/garbage.png" alt=""></td>
+                            
                             <!-- Outras linhas de registros -->
-                            <!-- <td><?php echo htmlspecialchars($row['route_type']); ?></td>
+                            <!-- <td><?php echo htmlspecialchars($row['route_desc']); ?></td>
+                            <td><?php echo htmlspecialchars($row['route_type']); ?></td>
                             <td><?php echo htmlspecialchars($row['route_url']); ?></td>
                             <td><?php echo htmlspecialchars($row['route_color']); ?></td>
                             <td><?php echo htmlspecialchars($row['route_text_color']); ?></td> -->

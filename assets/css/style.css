@@ -45,3 +45,11 @@
     background-color: #000;
 }
 
+.c-garbage {
+    text-align: center;
+}
+
+.c-garbage__img {
+    width: 25px;
+    cursor: pointer;
+}
