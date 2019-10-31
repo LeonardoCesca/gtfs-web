@@ -6,9 +6,8 @@
     
     try {
         $pdo = new PDO($conexao, $user, $password);
-        echo "Connected successfully";
     } catch (PDOException $error) {
-        echo "Connection error: " . $error->getMessage();
+        echo "Erro de conexão: " . $error->getMessage();
     }    
 
 ?>
