@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 29-Out-2019 às 18:36
--- Versão do servidor: 10.4.8-MariaDB
--- versão do PHP: 7.3.10
+-- Tempo de geração: 31/10/2019 às 01:20
+-- Versão do servidor: 10.4.6-MariaDB
+-- Versão do PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,10 +25,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `routes`
+-- Estrutura para tabela `routes`
 --
 
 CREATE TABLE `routes` (
+  `id` int(11) NOT NULL,
   `route_id` varchar(255) NOT NULL,
   `agency_id` varchar(255) NOT NULL,
   `route_short_name` varchar(255) NOT NULL,
@@ -41,14 +42,24 @@ CREATE TABLE `routes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Índices para tabelas despejadas
+-- Índices de tabelas apagadas
 --
 
 --
--- Índices para tabela `routes`
+-- Índices de tabela `routes`
 --
 ALTER TABLE `routes`
-  ADD PRIMARY KEY (`route_id`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas apagadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `routes`
+--
+ALTER TABLE `routes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
