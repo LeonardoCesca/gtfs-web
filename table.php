@@ -48,19 +48,19 @@ try {
                 <tbody>
                     <?php while ($row = $q->fetch()): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($row['id']) ?></td>
-                            <td><?php echo htmlspecialchars($row['route_id']) ?></td>
-                            <td><?php echo htmlspecialchars($row['agency_id']); ?></td>
-                            <td><?php echo htmlspecialchars($row['route_short_name']); ?></td>
-                            <td><?php echo htmlspecialchars($row['route_long_name']); ?></td>
+                            <td><?php echo $row['id'] ?></td>
+                            <td><?php echo $row['route_id'] ?></td>
+                            <td><?php echo $row['agency_id']; ?></td>
+                            <td><?php echo $row['route_short_name']; ?></td>
+                            <td><?php echo $row['route_long_name']; ?></td>
                             <td class="c-garbage"><img class="c-garbage__img" src="./assets/img/garbage.png" alt=""></td>
                             
                             <!-- Outras linhas de registros -->
-                            <!-- <td><?php echo htmlspecialchars($row['route_desc']); ?></td>
-                            <td><?php echo htmlspecialchars($row['route_type']); ?></td>
-                            <td><?php echo htmlspecialchars($row['route_url']); ?></td>
-                            <td><?php echo htmlspecialchars($row['route_color']); ?></td>
-                            <td><?php echo htmlspecialchars($row['route_text_color']); ?></td> -->
+                            <!-- <td><?php echo $row['route_desc']; ?></td>
+                            <td><?php echo $row['route_type']; ?></td>
+                            <td><?php echo $row['route_url']; ?></td>
+                            <td><?php echo $row['route_color']; ?></td>
+                            <td><?php echo $row['route_text_color']; ?></td> -->
                         </tr>
                     <?php endwhile; ?>
                 </tbody>
