@@ -5,9 +5,14 @@
 
 .c-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.c-container__title {
+    margin-bottom: 3em;
 }
 
 .c-container__btn {
@@ -52,4 +57,9 @@
 .c-garbage__img {
     width: 25px;
     cursor: pointer;
+}
+
+.c-table-container {
+    overflow-y: auto;
+    height: calc(100vh - 80px);
 }

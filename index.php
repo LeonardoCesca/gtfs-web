@@ -31,10 +31,10 @@ fclose($open);
     <title>Trabalho Web - 2019/2</title>
 </head>
 <body>
-    <h1>Bem-vindo!</h1>
     <div class="c-container">
+        <h1 class="c-container__title">Trabalho Final - Web 2019/2</h1>
         <form action="table.php" method="GET">
-            <input class="o-btn o-btn--black" type="submit" value="Ver linhas de Onibus">
+            <input class="o-btn o-btn--black" type="submit" value="Ver linhas de Ônibus">
         </form>
     </div>
     

@@ -33,42 +33,44 @@ try {
     </head>
     <body>
         <div class="container center">
-            <h1 class="text-center mt-3 mb-3">Onibus - Porto Alegre</h1>
-            <table class="table table-bordered table-condensed">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Número Linha</th>
-                        <th>Orgão</th>
-                        <th>Linha</th>
-                        <th>Itinerário</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php while ($row = $q->fetch()): ?>
+            <h1 class="text-center mt-3 mb-3">Ônibus - Porto Alegre</h1>
+            <div class="c-table-container">
+                <table class="table table-bordered table-condensed">
+                    <thead>
                         <tr>
-                            <td><?php echo $row['id'] ?></td>
-                            <td><?php echo $row['route_id'] ?></td>
-                            <td><?php echo $row['agency_id']; ?></td>
-                            <td><?php echo $row['route_short_name']; ?></td>
-                            <td><?php echo $row['route_long_name']; ?></td>
-                            <td class="c-garbage">
-                                <a href="delete.php?id=<?php echo $row['id'];?>">
-                                    <img class="c-garbage__img" src="./assets/img/garbage.png" alt="">
-                                </a>
-                            </td>
-                            
-                            <!-- Outras linhas de registros -->
-                            <!-- <td><?php echo $row['route_desc']; ?></td>
-                            <td><?php echo $row['route_type']; ?></td>
-                            <td><?php echo $row['route_url']; ?></td>
-                            <td><?php echo $row['route_color']; ?></td>
-                            <td><?php echo $row['route_text_color']; ?></td> -->
+                            <th>Id</th>
+                            <th>Número Linha</th>
+                            <th>Orgão</th>
+                            <th>Linha</th>
+                            <th>Itinerário</th>
+                            <th></th>
                         </tr>
-                    <?php endwhile; ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php while ($row = $q->fetch()): ?>
+                            <tr>
+                                <td><?php echo $row['id'] ?></td>
+                                <td><?php echo $row['route_id'] ?></td>
+                                <td><?php echo $row['agency_id']; ?></td>
+                                <td><?php echo $row['route_short_name']; ?></td>
+                                <td><?php echo $row['route_long_name']; ?></td>
+                                <td class="c-garbage">
+                                    <a href="delete.php?id=<?php echo $row['id'];?>">
+                                        <img class="c-garbage__img" src="./assets/img/garbage.png" alt="">
+                                    </a>
+                                </td>
+                                
+                                <!-- Outras linhas de registros -->
+                                <!-- <td><?php echo $row['route_desc']; ?></td>
+                                <td><?php echo $row['route_type']; ?></td>
+                                <td><?php echo $row['route_url']; ?></td>
+                                <td><?php echo $row['route_color']; ?></td>
+                                <td><?php echo $row['route_text_color']; ?></td> -->
+                            </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </body>
-</div>
 </html>
