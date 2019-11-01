@@ -53,7 +53,11 @@ try {
                             <td><?php echo $row['agency_id']; ?></td>
                             <td><?php echo $row['route_short_name']; ?></td>
                             <td><?php echo $row['route_long_name']; ?></td>
-                            <td class="c-garbage"><img class="c-garbage__img" src="./assets/img/garbage.png" alt=""></td>
+                            <td class="c-garbage">
+                                <a href="delete.php?id=<?php echo $row['id'];?>">
+                                    <img class="c-garbage__img" src="./assets/img/garbage.png" alt="">
+                                </a>
+                            </td>
                             
                             <!-- Outras linhas de registros -->
                             <!-- <td><?php echo $row['route_desc']; ?></td>
