@@ -54,9 +54,7 @@ try {
                                 <td><?php echo $row['route_short_name']; ?></td>
                                 <td><?php echo $row['route_long_name']; ?></td>
                                 <td class="c-garbage">
-                                    <a href="delete.php?id=<?php echo $row['id'];?>">
-                                        <img class="c-garbage__img" src="./assets/img/garbage.png" alt="">
-                                    </a>
+                                    <img class="c-garbage__img" src="./assets/img/garbage.png" alt="Lixeira" onclick="deletar('<?php echo $row['id'] ?>')">
                                 </td>
                                 
                                 <!-- Outras linhas de registros -->
@@ -71,5 +69,16 @@ try {
                 </table>
             </div>
         </div>
+
+        <script>
+            function deletar(id) {
+                let del = confirm('Você deseja excluir este registro?');
+                if (del) {
+                    location.href = 'delete.php?id='+ id;
+                } else {
+                    alert('Não foi possivel excluir o registro');
+                }
+            }
+        </script>
     </body>
 </html>
