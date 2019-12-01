@@ -1,5 +1,19 @@
 <?php
 
+session_start();
+$timeout = 600;
+
+if(isset($_SESSION['timeout'])) {
+    $duracao = time() - (int) $_SESSION['timeout'];
+
+    if($duracao > $timeout) {
+        session_destroy();
+        session_start();
+    }
+}
+
+$_SESSION['timeout'] = time(); 
+
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=trabWeb", "root", "");
 

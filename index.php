@@ -1,9 +1,5 @@
 <?php
 
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    session_start();
-}
-
     $servername = "mysql:host=localhost";
     $username = "root";
     $password= "";
