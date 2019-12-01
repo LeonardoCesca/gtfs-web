@@ -48,6 +48,11 @@ try {
         <title>Informações sobre Onibus</title>
     </head>
     <body>
+        <div class="back-page">
+            <a href="./index.php">    
+                <img src="./assets/img/back.png" alt="Voltar">
+            </a>
+        </div>
         <div class="container center">
             <h1 class="text-center mt-3 mb-3">Ônibus - Porto Alegre</h1>
             <div class="c-table-container">
