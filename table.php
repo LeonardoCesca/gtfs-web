@@ -56,7 +56,7 @@ try {
         <div class="container center">
             <h1 class="text-center mt-3 mb-3">Ônibus - Porto Alegre</h1>
             <div class="c-table-container">
-                <table class="table table-bordered table-condensed">
+                <table class="table table-bordered table-dark">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -76,7 +76,7 @@ try {
                                 <td><?php echo $row['route_short_name']; ?></td>
                                 <td><?php echo $row['route_long_name']; ?></td>
                                 <td class="c-garbage">
-                                    <img class="c-garbage__img" src="./assets/img/garbage.png" alt="Lixeira" onclick="deletar('<?php echo $row['id'] ?>')">
+                                    <img class="c-garbage__img" src="./assets/img/lixo.png" alt="Lixeira" onclick="deletar('<?php echo $row['id'] ?>')">
                                 </td>
                                 
                                 <!-- Outras linhas de registros -->
